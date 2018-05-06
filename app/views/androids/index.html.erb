@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Android nang Bayan Inc.</h1>
+
+<table border = "1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Year released</th>
+      <th>Camera</th>
+      <th>Mpixels</th>
+      <th>Internal storage</th>
+      <th>Num of sim slots</th>
+      <th>Screensize</th>
+      <th>Operating system</th>
+      <th>Num of stock</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @androids.each do |android| %>
+        <% if android.num_of_stock > 0 %>
+            <tr>
+            <td><%= android.name %></td>
+            <td><%= android.brand %></td>
+            <td><%= android.year_released %></td>
+            <td><%= android.camera %></td>
+            <td><%= android.mpixels %></td>
+            <td><%= android.internal_storage %></td>
+            <td><%= android.num_of_sim_slots %></td>
+            <td><%= android.screensize %></td>
+            <td><%= android.operating_system %></td>
+            <td><%= android.num_of_stock %></td>
+            <td><%= link_to 'Show', android %></td>
+            <td><%= link_to 'Edit', edit_android_path(android) %></td>
+            <td><a href = "http://localhost:3000/androids/sold_one/<%= android.id %>">Sold One</a></td>
+            <td><%= link_to 'Destroy', android, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+            </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Android', new_android_path %>

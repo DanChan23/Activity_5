@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @android.name %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @android.brand %>
+</p>
+
+<p>
+  <strong>Year released:</strong>
+  <%= @android.year_released %>
+</p>
+
+<p>
+  <strong>Camera:</strong>
+  <%= @android.camera %>
+</p>
+
+<p>
+  <strong>Mpixels:</strong>
+  <%= @android.mpixels %>
+</p>
+
+<p>
+  <strong>Internal storage:</strong>
+  <%= @android.internal_storage %>
+</p>
+
+<p>
+  <strong>Num of sim slots:</strong>
+  <%= @android.num_of_sim_slots %>
+</p>
+
+<p>
+  <strong>Screensize:</strong>
+  <%= @android.screensize %>
+</p>
+
+<p>
+  <strong>Operating system:</strong>
+  <%= @android.operating_system %>
+</p>
+
+<p>
+  <strong>Num of stock:</strong>
+  <%= @android.num_of_stock %>
+</p>
+
+<%= link_to 'Edit', edit_android_path(@android) %> |
+<%= link_to 'Back', androids_path %>
